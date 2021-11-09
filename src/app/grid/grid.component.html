@@ -1,0 +1,97 @@
+<div class="container-fluid" >
+    <div class="row">
+      <div class="col-12 col-lg-6 app-first-grid">
+    
+       <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="2" [numScroll]="1" [circular]="true" [autoplayInterval]="1000" >
+         <ng-template pTemplate="header">
+             <h5>Circular, AutoPlay, 2 Items per Page and Scroll by 1</h5>
+         </ng-template>
+         <ng-template let-product pTemplate="item">
+             <div class="product-item">
+                 <div class="product-item-content">
+                     <div class="p-mb-3">
+                     </div>
+                     <div>
+                         <h4 class="p-mb-1">{{product.name}}</h4>
+                         <h6 class="p-mt-0 p-mb-3">${{product.price}}</h6>
+                         <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                         <div class="car-buttons p-mt-5">
+                             <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                             <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                             <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </ng-template>
+     </p-carousel>
+   
+      </div>
+      <div class="col  app-second-grid" >
+      <div class="card  m-5 ">
+        <div class="card-header">
+          <h3>Petrol & Diesel rates in india</h3>
+        </div>
+        <div class="card-body">
+          <ul *ngFor="let x of petrolRates">
+            <!-- <li>{{x.name}}- <strong>{{x.rate | currency:'INR':'symbol':'3.1-1'}}/L</strong> </li> -->
+            <li>{{x.name}}- <strong>{{x.rate | currency:'INR':'symbol':'3.1-1'}}/L</strong> </li>
+            <li> <strong>{{x.rate | myCurrency}}</strong> </li>
+           </ul>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-lg-6 app-third-grid" >
+       <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+         deployment target.</p>
+         <!-- <p>Super power boost: {{2 | myCurrency:1}}</p> -->
+      </div>
+      <div class="col app-four-grid" >
+       <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+         deployment target.</p>
+      </div>
+    </div>
+   </div>
+   
+   <!-- 
+   <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="2" [numScroll]="1" [circular]="true" [autoplayInterval]="1000" >
+     <ng-template pTemplate="header">
+         <h5>Circular, AutoPlay, 2 Items per Page and Scroll by 1</h5>
+     </ng-template>
+     <ng-template let-product pTemplate="item">
+         <div class="product-item">
+             <div class="product-item-content">
+                      <h4 class="p-mb-1">{{product.name}}</h4>
+                     <h6 class="p-mt-0 p-mb-3">${{product.price}}</h6>
+                     <img src="https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?s=170667a" alt="">
+             </div>
+         </div>
+     </ng-template>
+   </p-carousel> -->
+   
+   
+   
+   
+   
+   
+   <!-- 
+   <div class="container-fluid" >
+     <div class="row">
+       <div class="col-12  col-lg-6" [ngStyle]="{'background-color':'#EDA909'}">
+        <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+          deployment target.</p>
+       </div>
+       <div class="col-12  col-lg-6 "  [ngStyle]="{'background-color':'#8CE0EB'}">
+        <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+          deployment target.</p>
+       </div>
+       <div class="col-12  col-lg-6" [ngStyle]="{'background-color':'#D2CCB1'}" >
+        <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+          deployment target.</p>
+       </div>
+       <div class="col-12  col-lg-6" [ngStyle]="{'background-color':'#73926C'}" >
+        <p> Learn one way to build applications with Angular and reuse your code and abilities to build apps for any
+          deployment target.</p>
+       </div>
+     </div>
+    </div> -->

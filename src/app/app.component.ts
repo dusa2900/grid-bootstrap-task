@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
+	fuels={
+	"petrolRate":102.35,
+	"dieselRate":100.10
+	}
 }
